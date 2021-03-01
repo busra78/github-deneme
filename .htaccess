@@ -1,0 +1,55 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule .(css|js|jpg|jpeg|png|gif|ico|swf|bmp)$ - [nocase,redirect=404,last]
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule .(css|js|jpg|jpeg|png|gif|ico|swf|bmp)$ - [nocase,redirect=404,last]
+RewriteEngine on
+
+ErrorDocument 404 /404.php
+
+
+RewriteRule ^hizmet-([0-9a-zA-Z-_]+)-([0-9]+)$  hizmet-detay.php?sef=$1&hizmet_id=$2 [L,QSA]
+RewriteRule ^proje-([0-9a-zA-Z-_]+)-([0-9]+)$  proje-detay.php?sef=$1&proje_id=$2 [L,QSA]
+RewriteRule ^oda-([0-9a-zA-Z-_]+)-([0-9]+)$  oda-detay.php?sef=$1&oda_id=$2 [L,QSA]
+RewriteRule ^bolge-([0-9a-zA-Z-_]+)-([0-9]+)$  bolge-detay.php?sef=$1&proje_id=$2 [L,QSA]
+RewriteRule ^album-detay-([0-9a-zA-Z-_]+)-([0-9]+)$  resim-galerisi.php?sef=$1&album_id=$2 [L,QSA]
+RewriteRule ^video-album-detay-([0-9a-zA-Z-_]+)-([0-9]+)$  video-galerisi.php?sef=$1&album_id=$2 [L,QSA]
+RewriteRule ^sayfa-([0-9a-zA-Z-_]+)-([0-9]+)$  sayfa.php?sef=$1&sayfa_id=$2 [L,QSA]
+RewriteRule ^blog-([0-9a-zA-Z-_]+)-([0-9]+)$  blog-detay.php?sef=$1&blog_id=$2 [L,QSA]
+RewriteRule ^projeler-([0-9a-zA-Z-_]+)-([0-9]+)$  proje-kategori.php?sef=$1&kategori_id=$2 [L,QSA]
+RewriteRule ^kategori-([0-9a-zA-Z-_]+)-([0-9]+)$  urun-kategori.php?sef=$1&kategori_id=$2 [L,QSA]
+RewriteRule ^konu-([0-9a-zA-Z-_]+)-([0-9]+)$  blog-kategori.php?sef=$1&kategori_id=$2 [L,QSA]
+RewriteRule ^ilan-detay-([0-9a-zA-Z-_]+)-([0-9]+)$  ilan-detay.php?sef=$1&ilan_id=$2 [L,QSA]
+RewriteRule ^odalar$ odalar.php [NC,L]
+RewriteRule ^oda-sec$ oda-sec.php [NC,L]
+RewriteRule ^rezervasyon$ rezervasyon.php [NC,L]
+RewriteRule ^teklif-al$ teklif.php [NC,L]
+RewriteRule ^blog$ blog.php [NC,L]
+RewriteRule ^sss$ sss.php [NC,L]
+RewriteRule ^resim-galerisi$ resim-album.php [NC,L]
+RewriteRule ^video-galerisi$ video-album.php [NC,L]
+RewriteRule ^satin-al$ satin-al.php [NC,L]
+RewriteRule ^banka-hesaplarimiz$ banka-hesaplarimiz.php [NC,L]
+RewriteRule ^hizmetler$ hizmetler.php [NC,L]
+RewriteRule ^hizmet-bolgeleri$ bolgeler.php [NC,L]
+RewriteRule ^iletisim$ iletisim.php [NC,L]
+RewriteRule ^haberler$ haberler.php [NC,L]
+RewriteRule ^sitemap.xml$ sitemap.php [NC,L]
+
+
+#SSL
+#RewriteCond %{HTTPS} off
+#RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+
+
+
+
+
+
+
+
+
+
+
